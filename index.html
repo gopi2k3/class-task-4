@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+
+
+<script>
+
+class Book{
+	constructor(title,author,year){
+		
+		this.title=title;
+		this.author=author;
+		this.year=year
+	}
+	
+	
+	
+	displayBook(){
+		
+		document.write(`Book Title : ${this.title}`)
+		document.write(`<br>Author Name : ${this.author}`)
+		document.write(`<br>Publication Year : ${this.year}`)
+		document.write(`<br>-------------------`)
+	}
+	
+}
+
+let detail1=new Book('Naruto','Kishimoto',2003)
+
+detail1.displayBook()
+
+
+class Ebook extends Book{
+	
+	
+		constructor(title,author,year,price){
+		super(title,author,year);
+		this.price=price
+		
+		
+	}
+	
+	
+	
+	displayBook(){
+		
+			document.write(`<br>Book Title : ${this.title}`)
+		document.write(`<br>Author Name : ${this.author}`)
+		document.write(`<br>Publication Year : ${this.year}`)
+		document.write(`<br>Book Price :${this.price}.Rs`)
+		
+	}
+	
+}
+
+
+let detail2=new Ebook('kmc','Kishimoto',2003,250)
+
+detail2.displayBook()
+</script>
+</body>
+</html>
